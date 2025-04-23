@@ -1,0 +1,111 @@
+import { saveStudentsToStorage } from "./localStorage"
+
+// Sample data for 10 students
+const sampleStudents = [{
+        id: "1",
+        name: "Nguyễn Văn An",
+        studentId: "SV001",
+        class: "CNTT1",
+        email: "an.nguyen@example.com",
+        phone: "0901234567",
+        address: "12 Lê Lợi, Quận 1, TP HCM",
+        dateOfBirth: "2000-05-15",
+    },
+    {
+        id: "2",
+        name: "Trần Thị Bình",
+        studentId: "SV002",
+        class: "CNTT2",
+        email: "binh.tran@example.com",
+        phone: "0912345678",
+        address: "25 Nguyễn Huệ, Quận 1, TP HCM",
+        dateOfBirth: "2001-08-20",
+    },
+    {
+        id: "3",
+        name: "Lê Văn Cường",
+        studentId: "SV003",
+        class: "CNTT1",
+        email: "cuong.le@example.com",
+        phone: "0923456789",
+        address: "78 Trần Hưng Đạo, Quận 5, TP HCM",
+        dateOfBirth: "2000-01-10",
+    },
+    {
+        id: "4",
+        name: "Phạm Thị Dung",
+        studentId: "SV004",
+        class: "KTPM1",
+        email: "dung.pham@example.com",
+        phone: "0934567890",
+        address: "56 Lý Tự Trọng, Quận 1, TP HCM",
+        dateOfBirth: "2001-12-05",
+    },
+    {
+        id: "5",
+        name: "Hoàng Văn Em",
+        studentId: "SV005",
+        class: "KTPM2",
+        email: "em.hoang@example.com",
+        phone: "0945678901",
+        address: "92 Điện Biên Phủ, Quận 3, TP HCM",
+        dateOfBirth: "2000-07-22",
+    },
+    {
+        id: "6",
+        name: "Võ Thị Phương",
+        studentId: "SV006",
+        class: "CNTT2",
+        email: "phuong.vo@example.com",
+        phone: "0956789012",
+        address: "15 Nam Kỳ Khởi Nghĩa, Quận 3, TP HCM",
+        dateOfBirth: "2001-03-18",
+    },
+    {
+        id: "7",
+        name: "Đặng Văn Giang",
+        studentId: "SV007",
+        class: "KTPM1",
+        email: "giang.dang@example.com",
+        phone: "0967890123",
+        address: "108 Võ Văn Tần, Quận 3, TP HCM",
+        dateOfBirth: "2000-09-30",
+    },
+    {
+        id: "8",
+        name: "Bùi Thị Hoa",
+        studentId: "SV008",
+        class: "CNTT1",
+        email: "hoa.bui@example.com",
+        phone: "0978901234",
+        address: "27 Nguyễn Đình Chiểu, Quận 1, TP HCM",
+        dateOfBirth: "2001-06-12",
+    },
+    {
+        id: "9",
+        name: "Trương Văn Khánh",
+        studentId: "SV009",
+        class: "KTPM2",
+        email: "khanh.truong@example.com",
+        phone: "0989012345",
+        address: "64 Lê Thánh Tôn, Quận 1, TP HCM",
+        dateOfBirth: "2000-11-25",
+    },
+    {
+        id: "10",
+        name: "Lý Thị Lan",
+        studentId: "SV010",
+        class: "CNTT2",
+        email: "lan.ly@example.com",
+        phone: "0990123456",
+        address: "39 Phạm Ngọc Thạch, Quận 3, TP HCM",
+        dateOfBirth: "2001-04-08",
+    },
+]
+
+// Function to initialize sample data
+export const initializeSampleData = () => {
+    saveStudentsToStorage(sampleStudents)
+    console.log("Sample student data initialized.")
+    return sampleStudents
+}
